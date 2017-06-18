@@ -1,0 +1,22 @@
+<div class="vuiMarginBottom18px">
+    <button id="costComparisonExportDataButton" class="vuiButton exportDataButton vuiMargin0px" data-ng-click="exportData()">
+        Export
+    </button>
+</div>
+<div id="exportDataLoadErrorLayer" class="exportDataLoadErrorLayer" data-open="isExportDataLoadFail" data-vui-layer="" data-fullscreen="false" data-closeable="false">
+    <div data-vui-messagebox=""><strong>Unable to export data at this time.</strong></div>
+    <div data-vui-layerfooter="">
+        <button id="dataLoadErrorButton" class="vuiButton dataLoadErrorButton" type="button" data-ng-click="closeDataLoadError()">OK</button>
+    </div>
+</div>
+<div data-open="isOpenPortfolioAnalyticsMessageLayer" data-vui-layer="" data-fullscreen="false" data-closeable="true">
+    <div data-vui-messagebox="">
+        <div class="vuiIcon vuiIconWarning"></div>
+        To ensure the accuracy of portfolio analytics, please run the calculation before exporting.
+    </div>
+    <div data-vui-layerfooter="">
+        <button class="vuiButton" type="button" data-ng-click="goToSubAssetSelection()">Return to Sub-asset selection
+        </button>
+        <button class="vuiButton vuiFloatRgt vuiMargin0px" type="button" data-ng-click="generateCsv()">Export</button>
+    </div>
+</div>
